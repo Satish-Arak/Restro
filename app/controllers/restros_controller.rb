@@ -18,6 +18,7 @@ class RestrosController < ApplicationController
   end
 
   def show
+    @restro = Restro.find(params[:id])
   end
 
   private
