@@ -14,7 +14,7 @@ class CategoriesController < ApplicationController
     @category = @restro.categories.build(category_params)
 
     if @category.save
-      redirect_to restro_categories_path(@restro)
+      redirect_to restro_path(@restro)
     else
       render action: 'new'
     end
@@ -22,7 +22,7 @@ class CategoriesController < ApplicationController
   
   
   def show
-    @category = @restro.Categories.find(params[:id])
+    @category = @restro.categories.find(params[:id])
   end
   
   private
