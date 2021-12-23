@@ -1,0 +1,14 @@
+<nav class="navbar navbar-dark bg-success">
+  <div class="container-fluid">
+    <h3>Restraurants</h3>
+    <%= link_to 'create new restro', new_restro_path, class: 'nav-link'  %>
+  </div>
+</nav>
+</br>
+<table style="color:blue;text-align:center; " >
+<% @restros.each do |restro| %>
+  <tr>
+    <td><%= link_to restro.name, restro %></td>
+  </tr>
+<% end %>
+</table>
