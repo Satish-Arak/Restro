@@ -1,6 +1,6 @@
 class Restro < ApplicationRecord
-    has_many :categories
-    has_many :items
-    has_many :orders
-    has_many :users
+    has_many :categories, dependent: :destroy
+
+    has_many :orders, dependent: :destroy
+    has_many :users, dependent: :destroy
 end

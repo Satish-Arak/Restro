@@ -24,6 +24,24 @@ class CategoriesController < ApplicationController
   def show
     @category = @restro.categories.find(params[:id])
   end
+
+  def edit
+    @category = @restro.categories.find(params[:id])
+  end
+
+  # def update
+  #   if @category.update(category_params)
+  #     redirect_to [@category.restro, @category]
+  #   else
+  #     render action: 'edit'
+  #   end
+  # end
+
+  # def destroy
+  #   @category.destroy
+
+  #   redirect_to restro_categories_url(@restro)
+  # end
   
   private
   def set_restro
