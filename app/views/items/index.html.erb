@@ -1,2 +1,12 @@
-<h1>Items#index</h1>
-<p>Find me in app/views/items/index.html.erb</p>
+<h2>This is Item's index page.</h2>
+<h1>Items</h1>
+
+<%= link_to  "Create New item", new_category_item_path %>
+
+<table>
+    <% @category.items.each do |item| %>
+        <tr>
+        <td><%= link_to item.name, [item.category, item] %></td>
+        </tr>
+    <% end %>
+</table>
