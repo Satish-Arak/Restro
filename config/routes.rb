@@ -6,14 +6,12 @@ Rails.application.routes.draw do
   root to: "restros#index"
 
   resources :restros do
-    resources :categories 
+    resources :categories do
+      resources :items
+    end 
   end
 
   resources :categories do
-    resources :sub_categories
-  end
-
-  resources :sub_categories do
     resources :items
   end
 
