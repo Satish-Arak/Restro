@@ -1,2 +1,10 @@
-<h1>Items#new</h1>
-<p>Find me in app/views/items/new.html.erb</p>
+<h2>This is Item's new page.</h2>
+<%= form_for([@category, @item]) do |form| %>
+    
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+
+<p>
+    <%= form.submit %>
+</p>
+<% end %>

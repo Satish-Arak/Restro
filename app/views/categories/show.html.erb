@@ -1,3 +1,17 @@
+<h2>This is category's show page.</h2>
 <p>
   <h2><%= @category.name %></h2>
 </p>
+
+
+<%= link_to  "Create New item", new_category_item_path(@category) %>
+<table>
+    <% @category.items.each do |item| %>
+        <tr>
+          <td><%= link_to item.name, [item.category, item] %></td>   
+        </tr>
+    <% end %>
+</table>
+
+
+

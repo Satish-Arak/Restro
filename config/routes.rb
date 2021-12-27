@@ -8,7 +8,11 @@ Rails.application.routes.draw do
   resources :restros do
     resources :categories do
       resources :items
-    end
+    end 
+  end
+
+  resources :categories do
+    resources :items
   end
 
     devise_for :users
