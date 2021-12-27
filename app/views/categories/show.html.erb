@@ -3,12 +3,15 @@
   <h2><%= @category.name %></h2>
 </p>
 
-<%= link_to 'Add new Sub_category', new_category_sub_category_path(@category) %>
 
+<%= link_to  "Create New item", new_category_item_path(@category) %>
 <table>
-    <% @category.sub_categories.each do |sub_category| %>
+    <% @category.items.each do |item| %>
         <tr>
-        <td><%= sub_category.name %></td>
+          <td><%= link_to item.name, [item.category, item] %></td>   
         </tr>
     <% end %>
 </table>
+
+
+

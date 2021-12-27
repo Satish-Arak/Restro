@@ -17,7 +17,7 @@ class ItemsController < ApplicationController
     @item = @category.items.build(item_params)
 
     if @item.save
-      redirect_to category_items_path
+      redirect_to category_items_path(@category)
     else
       render action: 'new'
     end

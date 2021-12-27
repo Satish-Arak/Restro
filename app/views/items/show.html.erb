@@ -1,3 +1,15 @@
 <h2>This is Item's show page.</h2>
-<h1>Items#show</h1>
-<p>Find me in app/views/items/show.html.erb</p>
+
+<p>
+  <h2><%= @item.name %></h2>
+</p>
+
+
+<%= link_to  "Create New item", new_category_item_path(@category) %>
+<table>
+    <% @category.items.each do |item| %>
+        <tr>
+          <td><%= item.name %></td>   
+        </tr>
+    <% end %>
+</table>
