@@ -1,0 +1,22 @@
+<h1>Orders#new</h1>
+<p>Find me in app/views/orders/new.html.erb</p>
+<%= form_for([@order.restro, @order]) do |form| %>
+    <p>
+        <%= form.label :name %><br>
+        <%= form.text_field :name %>
+    </p>
+
+    <p>
+        <%= form.label :email %><br>
+        <%= form.text_field :email %>
+    </p>
+
+    <p>
+        <%= form.label :address %><br>
+        <%= form.text_field :address %>
+    </p>
+
+    <p>
+        <%= form.submit %>
+    </p>
+<% end %>

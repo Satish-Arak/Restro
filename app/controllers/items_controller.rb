@@ -23,12 +23,20 @@ class ItemsController < ApplicationController
     end
   end
 
+  def update
+    if @item.update(item_params)
+      redirect_to ([ @item.category,  @item])
+    else
+      render action: 'edit'
+    end
+  end
+
 private
   def set_category
     @category = Category.find(params[:category_id])
   end
 
   def item_params
-    params.require(:item).permit(:name, :category_id)
+    params.require(:item).permit(:name, :price, :category_id)
   end 
 end
