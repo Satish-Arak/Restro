@@ -1,4 +1,3 @@
-<h2>This is Item's new page.</h2>
 <%= form_for([@category, @item]) do |form| %>
     <p>
         <%= form.label :name %><br>
@@ -7,9 +6,16 @@
 
     <p>
         <%= form.label :price %><br>
-        <%= form.number_field :price, required: true %>
+        <%= form.number_field :price, required: true, placeholder: "Full price"  %>
     </p>
 
+
+    <p>
+        <%= form.label :price %><br>
+        <%= form.number_field :price, required: true, placeholder: "Half price"  %>
+    </p>
+    
+    
     <p>
         <%= form.submit %>
     </p>
